@@ -30,11 +30,11 @@ Sign in to your AWS administrator account:
 https://console.aws.amazon.com/<br />
 
 
-    Press Enter to continue<br />
-    Specify the AWS Region<br />
-    ? region: eu-west-2<br />
-    Specify the username of the new IAM user:<br />
-    ? user name: amplify-7T7mt<br />
+    Press Enter to continue
+    Specify the AWS Region
+    ? region: eu-west-2
+    Specify the username of the new IAM user:
+    ? user name: amplify-user
     
     
 Complete the user creation using the AWS console<br />
@@ -59,7 +59,7 @@ Follow these steps to set up access to your AWS account:
 
     Specify the username of the new IAM user:
     
-    user name: amplify
+    user name: amplify-user
 
  Complete the user creation
  
