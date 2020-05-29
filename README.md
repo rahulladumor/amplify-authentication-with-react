@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+What Is AWS Amplify?
+AWS Amplify was announced in November 2017 as an open-source library for developers looking to build cloud-connected applications with JavaScript on the web or mobile platforms.
+Have you ever heard of Google’s Firebase? It’s a very similar concept, but running in AWS.
+AWS Amplify allows you to build apps incredibly fast, leveraging services provided by Amazon without managing any infrastructure.
+AWS Amplify is a development platform for building secure, scalable mobile and web applications.
+Amplify provides a set of features such as auth, analytics, API (GraphQL and REST), interactions, predictions, PubSub, storage, push notifications, and XR that enable you to build feature-rich serverless applications powered by AWS services.
+Amplify covers the complete mobile application development workflow from version control and code testing to production deployment, and it easily scales with your business from thousands of users to tens of millions.
+The Amplify libraries and CLI, part of the Amplify framework, are open source and offer a pluggable interface that enables you to customize and create your own plugins.
 
-## Available Scripts
+from AWS Amplify
+Sounds great, so let’s see how this works!
+In this first post on AWS Amplify, I will walk through the process of installing, configuring Amplify, and creating a React application with complete authentication in simple steps.
 
-In the project directory, you can run:
+Basic Setup
+First, if you don’t have Node yet, download and install it.
+https:nodejs.org
 
-### `yarn start`
+You will also need an AWS account to run Amplify. Create your AWS account if you don’t have one yet.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install the Amplify CLI
+The Amplify Command Line Interface (CLI) is a unified toolchain to create, integrate, and manage the AWS cloud services for your app.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+`$ sudo npm install -g @aws-amplify/cli`
 
-### `yarn test`
+Configure Amplify
+Sign in to your AWS account and run:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`$ amplify configure`
 
-### `yarn build`
+Press Enter, specify the AWS region, username, and Enter again.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`amplify configure
+Scanning for plugins...
+Plugin scan successful
+Follow these steps to set up access to your AWS account:
+Sign in to your AWS administrator account:
+https://console.aws.amazon.com/
+Press Enter to continue
+Specify the AWS Region
+? region:  eu-west-2
+Specify the username of the new IAM user:
+? user name:  amplify-7T7mt
+Complete the user creation using the AWS console
+https://console.aws.amazon.com/iam/home?region=undefined#/users$new?step=final&accessKey&userNames=amplify-7T7mt&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
+Press Enter to continue`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Complete the AWS Amplify user creation, download the credentials, and add the remaining information in the terminal:
